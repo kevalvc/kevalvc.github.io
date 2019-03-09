@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Keval Chavda - Software Engineer</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-spy="scroll" data-offset="1" data-target="#navbar-nav">
+  <div id="top" class="jumbotron">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="display-3">Keval Chavda</h1>
+        <p class="lead SD">software developer</p>
+        <span class="glyphicon glyphicon-chevron-down" style='animation-name: wiggle; animation-duration: 1.2s;'></span>
+      </div>
+    </div>
+  </div>
+
+  <nav id="navbar-nav" class="navbar navbar-expand-lg navbar-dark bg-dark navbar-top-fixed">
+    <a class="navbar-brand" href="#">Keval Chavda</a>
+    <button class="navbar-toggler" onclick="clickedIt()" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#resume">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="keval" class="section">
+    <div class="text-center">
+      <img src="profile.jpg" alt="Keval Chavda" class="circle-profile text-center" height="240" width="240">
+      <div class="container profile-text perks">
+        <span id="typed">I'm </span>
+        <span class="typed-cursor">|</span>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="about" class="section">
+    <div style="height: 1250px; background-color: red;">
+      <div class="container">
+        <div class="row">
+          <center>
+
+            <h2>About Me</h2>
+            <p class="lead">I&#039;m an engineer, software developer, and data scientist.</p>
+
+            <hr />
+
+            <!-- <img src="view/images/sharon_lin.png" alt="Sharon Lin" width="246" height="246" /> -->
+          </center>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="section">
+    <div style="height: 1000px; background-color: ;">
+      <div class="container">
+        <h2 class="pg-title text-center">Skills/Abilities</h2>
+
+        <div class="row">
+          <div class="col-md">
+            <p class="text-center">BOOM</p>
+          </div>
+          <div class="col-md">
+            <p class="text-center">BOOM</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section id="resume" class="section">
+    <div style="height: 1250px; background-color: green;">
+      <div class="container">
+        <h2>About Me</h2>
+        <p class="lead">I&#039;m an engineer, software developer, and data scientist.</p>
+        <hr />
+
+        <div class="row">
+          <center>
+            <!-- <img src="view/images/sharon_lin.png" alt="Sharon Lin" width="246" height="246" /> -->
+          </center>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="section new-sect-class">
+    <div style="height: 1250px; background-color: blue;">
+      <div class="container">
+        <h2>About Me</h2>
+        <p class="lead">I&#039;m an engineer, software developer, and data scientist.</p>
+
+        <hr />
+
+        <div class="row">
+          <center>
+            <!-- <img src="view/images/sharon_lin.png" alt="Sharon Lin" width="246" height="246" /> -->
+          </center>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript" src="js/tether.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/style.js"></script>
+  <script type="text/javascript" src="js/typed.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').parent().closest('a').closest('div').remove();
+    });
+
+    $(function() {
+      $("#typed").typed({
+        strings: ["an Engineer.", "a Software Developer.", ""],
+        typeSpeed: 20,
+        backSpeed: 10,
+        loop: true
+      });
+    });
+  </script>
+
+</body>
+
+</html>

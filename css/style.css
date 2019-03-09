@@ -1,0 +1,152 @@
+.display-3 {
+  font-weight: 600;
+  /* margin-top: 15%; */
+  padding-bottom: 15px;
+  border-bottom: 1px solid white;
+  display: inline-block;
+  color: white;
+}
+
+.SD {
+  font-size: 2em;
+  font-weight: 300;
+  color: white;
+}
+
+.jumbotron .container {
+  position: relative;
+  top: 25%;
+  z-index: 5;
+}
+
+.jumbotron {
+  height: 100vh;
+  border-radius: 0;
+  background-image: url('5bdk9ixr2b701.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.jumbotron::before {
+  height: 100vh;
+  content: '';
+  background-color: #9a9eda;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  opacity: 0.55;
+  filter: alpha(opacity=75);
+  z-index: 2;
+}
+
+.typed-cursor {
+  color: #000;
+  font-size: 36px;
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+.circle-profile {
+  margin-top: 100px;
+  margin-bottom: 60px;
+  border: 5px solid black;
+  border-radius: 50%;
+}
+
+.profile-text {
+  font-size: 36px;
+  margin-bottom: 100px;
+}
+
+.pg-title {
+  font-size: 45px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid lightgray;
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  /* min-height: 100px; */
+}
+
+.nav-item {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.section {
+  padding-top: 90px;
+  margin-top: -90px;
+}
+
+@media screen and (max-width: 992px) {
+  .new-sect-class {
+    padding-top: 249px;
+    margin-top: -249px;
+  }
+  /* .navbar-fixed-top {
+        position: fixed;
+        margin-left: 0px;
+        margin-right: 0px;
+    } */
+}
+
+.glyphicon {
+  animation-name: wiggle;
+  animation-duration: 1.2s;
+}
