@@ -1,0 +1,10 @@
+var x;
+var y;
+var z;
+var a1;
+var a2;
+var a3;
+var p=(x/ptl*50)+(y/ppl*30)+(z/pph*20);
+var r=p*atq;
+var a=a1*0.55+a2*0.3+a3*0.15;
+var q=p*a;

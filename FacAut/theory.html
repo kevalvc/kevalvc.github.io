@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Theory</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+  <script src="js/theory.js"></script>
+  <!-- <script src="test.js"></script> -->
+  <!-- <script src="js/attendance.js"></script> -->
+  <style>
+    .numberofgroups {
+      margin-bottom: 0;
+      padding-left: 0.775rem;
+    }
+
+    #submitabc {
+      text-align: center;
+    }
+
+    #myProjectDisplay {
+      display: none;
+    }
+
+    #myPractDisplay {
+      display: none;
+    }
+
+    #generateTableFinal {
+      display: none;
+    }
+
+    #backToPracs {
+      display: none;
+    }
+
+    #backtoprojbtn {
+      margin: auto;
+      display: block;
+    }
+
+  </style>
+</head>
+
+<body>
+  <section class="theorySection">
+    <div class="container">
+      <br>
+      <br>
+      <form class="form">
+        <div class="form-group row">
+          <label class="col-4" for="inputTheory">Enter number of planned theory Lectures  </label>
+          <input type="number" class="form-control col-8" id="inputTheoryAssn" placeholder="">
+        </div>
+        <div class="form-group row">
+          <label class="col-4" for="inputTheoryCond">Enter total number of conducted theory Lectures  </label>
+          <input type="number" class="form-control col-8" id="inputTheoryCond" placeholder="">
+        </div>
+        <!-- <div class="form-group row">
+          <label class="col-4" for="inputElectiveCond">Enter total number of conducted elective Lectures  </label>
+          <input type="number" class="form-control col-8" id="inputElectiveCond" placeholder="">
+        </div> -->
+        <!-- style="width:200px" -->
+        <div class="form-group mx-auto" >
+          <input type="button" id="submit" class="btn btn-primary btn-lg mx-auto" value="Submit" onclick="generate()" style="display: table;">
+        </div>
+      </form>
+      <div id="lec" class="container">
+
+      </div>
+  </section>
+
+  <section class="pracSection">
+    <div class="container" id="myPractDisplay">
+      <br>
+      <br>
+      <form class="form">
+        <div class="form-group row">
+          <label class="col-4" for="inputPracs">Enter number of planned Practical Lectures</label>
+          <input type="number" class="form-control col-8" id="inputPracsAssn" placeholder="">
+        </div>
+        <div class="form-group row">
+          <label class="col-4" for="inputTheoryCond">Enter total number of conducted Practical Lectures  </label>
+          <input type="number" class="form-control col-8" id="inputPracsCond" placeholder="">
+        </div>
+        <div class="form-group mx-auto" style="display: table;">
+          <input type="button" id="backToTheory" class="btn btn-warning btn-lg mx-auto" value="Back" onclick="btoTheory()" style="margin-right: 16px !important;">
+          <input type="button" id="submit-2" class="btn btn-info btn-lg mx-auto" value="Submit" onclick="generatePracs()" >
+        </div>
+      </form>
+      <div id="prac" class="container">
+
+      </div>
+    </div>
+  </section>
+
+  <section class="projSection">
+    <div class="container" id="myProjectDisplay">
+      <br>
+      <br>
+      <form class="form form-group">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="text-center">Mini Project</th>
+              <th class="text-center">Minor Project</th>
+              <th class="text-center">Major Project</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+            <td><label>Enter the total number of hours regarding the project type:</label></td>
+          </tr> -->
+          <tr>
+            <td class="text-center"><label>Total number of planned hours in mini projects: </label></td>
+            <td class="text-center"><label>Total number of planned hours in minor projects: </label></td>
+            <td class="text-center"><label>Total number of planned hours in major projects: </label></td>
+          </tr>
+            <tr>
+              <td class="text-center"><input class="form-control" type="number" value="0" id="mini-input-planned" placeholder="Total number of hours in mini" onchange="generateProject()"></td>
+              <td class="text-center"><input class="form-control" type="number" value="0" id="minor-input-planned" placeholder="Total number of hours in minor" onchange="generateProject()"></td>
+              <td class="text-center"><input class="form-control" type="number" value="0" id="major-input-planned" placeholder="Total number of hours in major" onchange="generateProject()"></td>
+            </tr>
+          <tr>
+            <td class="text-center"><label>Number of hours conducted in mini projects: </label></td>
+            <td class="text-center"><label>Number of hours conducted in minor projects: </label></td>
+            <td class="text-center"><label>Number of hours conducted in major projects: </label></td>
+          </tr>
+            <!-- <tr>
+              <td class="text-center"><input class="form-control" type="number" value="0" id="mini-input" placeholder="Total number of hours in mini" onchange="generateProject()"></td>
+              <td class="text-center"><input class="form-control" type="number" value="0" id="minor-input" placeholder="Total number of hours in minor" onchange="generateProject()"></td>
+              <td class="text-center"><input class="form-control" type="number" value="0" id="major-input" placeholder="Total number of hours in major" onchange="generateProject()"></td>
+            </tr> -->
+          </tbody>
+        </table>
+        <div id="proj" class="">
+
+        </div>
+        <div id="proj2" class="">
+
+        </div>
+        <div id="proj3" class="">
+
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="table-btns">
+    <div style="display: block; text-align: center;">
+      <input type="button" id="backToPracs" class="genTbtn btn btn-warning btn-lg mx-auto" value="Back" onclick="bToPracs()" style="margin-right: 16px !important;">
+      <input type="button" id="generateTableFinal" class="genTbtn btn btn-info btn-lg mx-auto" value="Generate Table" onclick="genT()">
+    </div>
+    <div class="container" id="tablegenerated">
+
+    </div>
+  </section>
+  </div>
+
+
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
+  <script src="js/tether.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script> -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
+</body>
+
+</html>
