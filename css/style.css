@@ -1,3 +1,13 @@
+body {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
 .main-navbar {
   background-color: #252627 !important;
   /* background-color: #091D3B !important; */
@@ -7,6 +17,7 @@
   /* position: relative; */
   padding: 20px;
   position: absolute;
+  height: 80px;
   width: -webkit-fill-available;
   top:0;
   left:0;
@@ -32,10 +43,11 @@
 }
 
 #linkedin-id, #github-id, #mail-id {
-  padding-top: 18px;
+  padding-top: 20px;
+  margin-top: 30px;
   padding-bottom: 8px;
   padding-left: 2px;
-  border-radius: 10px;
+  border-radius: 100px;
 }
 
 #linkedin-id:hover {
@@ -134,7 +146,7 @@
   color: #e6f1ff;
   /* color: #a9a9b3; */
   font-family: inter ui,-apple-system,BlinkMacSystemFont,roboto,segoe ui,Helvetica,Arial,sans-serif;
-  padding-top: 18%;
+  /* padding-top: 15%; */
 }
 .dev-info {
   line-height: 1.54;
@@ -146,18 +158,22 @@
   padding-top: 1%;
 }
 
+.cover-index {
+  padding-top: 18%;
+  padding-bottom: 5%;
+}
+
 .cover {
-
   color: white;
-
+  overflow-y: scroll;
   text-align: center;
 
   background-color: #292a2d;
   background: linear-gradient(to bottom right, #292a2d, #252627);
   /* background-color: #0a192f; */
 
-  height: calc(100vh);
-  /* height: calc(100vh - 80px); */
+  /* height: calc(100vh); */
+  height: calc(100vh - 130px);
   display: block;
   justify-content: center;
   align-items: center;
@@ -174,6 +190,10 @@
     color: #444;
     max-width: 80%;
   }
+}
+
+.cover::-webkit-scrollbar {
+  display: none;
 }
 
 .footer-list {
